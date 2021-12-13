@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 
 export const Home = ({ repos }) => {
   return (
@@ -8,7 +9,11 @@ export const Home = ({ repos }) => {
       </Head>
       <ul>
         {repos.map((repo) => {
-          return <li key={repo.id}>{repo.name}</li>;
+          return (
+            <li key={repo.id}>
+              <Link href={`${repo.html_url}`}>{repo.name}</Link>
+            </li>
+          );
         })}
       </ul>
     </div>
