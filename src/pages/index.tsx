@@ -15,12 +15,13 @@ export const Home = ({ repos }) => {
   );
 };
 
-export async function getServerSideProps() {
+export const getServerSideProps = async () => {
   const response = await fetch(
     `https://api.github.com/users/AyamotoKohei/repos`
   );
   const repos = await response.json();
+
   return { props: { repos } };
-}
+};
 
 export default Home;
