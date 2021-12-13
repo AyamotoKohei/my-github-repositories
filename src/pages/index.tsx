@@ -15,7 +15,7 @@ export const Home = ({ repos }) => {
   );
 };
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const response = await fetch(
     `https://api.github.com/users/AyamotoKohei/repos`
   );
