@@ -5,8 +5,9 @@ export const Home = ({ repos }) => {
   return (
     <div>
       <Head>
-        <title>Home Page</title>
+        <title>GitHub Repositories</title>
       </Head>
+      <h1>AyamotoKohei GitHub Repositories</h1>
       <Repositries repos={repos} />
     </div>
   );
