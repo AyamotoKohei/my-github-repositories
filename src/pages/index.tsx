@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Link from "next/link";
+import Repositries from "../components/organisms/Repositries";
 
 export const Home = ({ repos }) => {
   return (
@@ -7,15 +7,7 @@ export const Home = ({ repos }) => {
       <Head>
         <title>Home Page</title>
       </Head>
-      <ul>
-        {repos.map((repo) => {
-          return (
-            <li key={repo.id}>
-              <Link href={`${repo.html_url}`}>{repo.name}</Link>
-            </li>
-          );
-        })}
-      </ul>
+      <Repositries repos={repos} />
     </div>
   );
 };
